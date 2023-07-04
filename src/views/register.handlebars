@@ -1,0 +1,28 @@
+<h1>Formulario de registro</h1>
+
+<div>
+  <form method='post' action='/api/auth/register'>
+    <label for='nombre'>Nombre</label>
+    <input type='text' name='first_name' />
+    <br />
+    <label for='nombre'>Apellido</label>
+    <input type='text' name='last_name' />
+    <br />
+    <label for='edad'>Edad</label>
+    <input type='number' name='age' />
+    <br />
+    <label for='nombre'>Email</label>
+    <input type='text' name='email' />
+    <br />
+    <label for='nombre'>Password</label>
+    <input type='text' name='password' />
+    <br />
+    <button type='submit'>submit</button>
+  </form>
+
+  <hr />
+  <button onclick='goHome()'>Home</button>
+  <button onclick='goLogin()'>Login</button>
+</div>
+
+<script src='/register.js'></script>

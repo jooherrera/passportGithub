@@ -1,0 +1,21 @@
+<h1>Login</h1>
+
+<div>
+  <form action='/api/auth/login' method='post'>
+    <label for='nombre'>Email</label>
+    <input type='text' name='email' required />
+    <br />
+    <label for='nombre'>Password</label>
+    <input type='text' name='password' required />
+    <br />
+    <button type='submit' id='send'>submit</button>
+  </form>
+
+  <hr />
+  <button onclick='goHome()'>Home</button>
+  <button onclick='goRegister()'>Register</button>
+</div>
+
+<script>
+  function goHome(){ window.location.href = "/" }; function goRegister() { window.location.href = '/register' };
+</script>
