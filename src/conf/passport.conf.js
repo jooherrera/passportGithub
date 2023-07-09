@@ -44,6 +44,7 @@ export const initializePassport = (app) => {
           console.log('Usuario no existe')
           return done(null, false)
         }
+        //COMPARAMOS LAS CONTRASEÑAS
         const isMatch = user.comparePassword(password)
         if (!isMatch) return done(null, false)
         return done(null, user)
@@ -57,8 +58,8 @@ export const initializePassport = (app) => {
     'github',
     new GitHubStrategy(
       {
-        clientID: '',
-        clientSecret: '',
+        clientID: process.env.CLIENT_ID,
+        clientSecret: process.env.CLIENT_SECRET,
         callbackURL: 'http://localhost:8080/api/auth/githubcallback',
       },
       async (accessToken, refreshToken, profile, done) => {

@@ -19,7 +19,7 @@ handlebars(app) //CONF DE HANDLEBARS
 sessionConf(app) //CONF DE SESSIONS
 initializePassport(app) //VA DESPUES DE SESSION- CONF DE PASSPORT
 //CONEXION A MONGODB PARA LOS PRODUCTOS, CARRITOS...
-mongoConf('')
+mongoConf(process.env.URI)
 
 app.use('/', viewsRouter) //VISTAS
 app.use('/api/auth', authRouter) // ROUTER PARA AUTH
