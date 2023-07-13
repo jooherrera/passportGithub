@@ -15,10 +15,7 @@ const userSchema = new Schema({
     required: true,
     unique: true,
   },
-  age: {
-    type: Number,
-    default: 0,
-  },
+  age: { type: Number, require: true, min: 18, max: 100 },
   password: {
     type: String,
     default: '',
